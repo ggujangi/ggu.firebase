@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Base" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar.Main" parent="TextAppearance.Base">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="TextAppearance.Title.List" parent="TextAppearance.Base">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
