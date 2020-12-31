@@ -2,7 +2,7 @@ package com.ggu.firebase.data
 
 import kotlin.math.roundToInt
 
-class SampleRepository(private val dataSource: SampleDataSource) {
+class SampleRepository(private val dataSource: SampleDataSource = SampleDataSource()) {
 
     suspend fun getUsers(page:Int) = dataSource.getUsers(page)
 

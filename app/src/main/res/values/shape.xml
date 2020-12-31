@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize20Percent" parent="">
+        <item name="cornerSizeBottomLeft">20%</item>
+        <item name="cornerSizeTopRight">20%</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+        <item name="cornerFamilyTopRight">cut</item>
+    </style>
+
+</resources>
