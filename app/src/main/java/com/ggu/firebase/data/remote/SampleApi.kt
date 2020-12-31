@@ -11,7 +11,7 @@ interface SampleApi {
 
     // LIST USERS
     @GET("users")
-    suspend fun getUsers(@Query("page") page: Int): List<SampleData<User>>
+    suspend fun getUsers(@Query("page") page: Int): SampleData<User>
 
 
     // SINGLE USER
@@ -21,7 +21,7 @@ interface SampleApi {
 
     // LIST <RESOURCE>
     @GET("unknown")
-    suspend fun getResources(): List<SampleData<Resource>>
+    suspend fun getResources(): SampleData<Resource>
 
     // SINGLE <RESOURCE>
     @GET("unknown/{id}")
