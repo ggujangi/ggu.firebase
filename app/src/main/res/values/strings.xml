@@ -4,6 +4,7 @@
     <string name="title_activity_intro">IntroActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_sample">SampleActivity</string>
 
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -17,6 +18,7 @@
     <string name="delete">DELETE</string>
 
     <string name="menu_login">LOGIN</string>
+    <string name="menu_sample">SAMPLE</string>
     <string name="menu_users">USERS</string>
     <string name="menu_random_user">RANDOM USER</string>
     <string name="menu_resources">RESOURCES</string>

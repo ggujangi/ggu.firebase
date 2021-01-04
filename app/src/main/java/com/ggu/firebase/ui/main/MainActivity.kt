@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import com.ggu.firebase.R
 import com.ggu.firebase.databinding.ActivityMainBinding
 import com.ggu.firebase.ui.login.LoginActivity
+import com.ggu.firebase.ui.sample.SampleActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.menu_login -> startActivity(Intent(this, LoginActivity::class.java))
+            R.id.menu_sample -> startActivity(Intent(this, SampleActivity::class.java))
         }
 
         return super.onOptionsItemSelected(item)

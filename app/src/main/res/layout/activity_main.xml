@@ -24,6 +24,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:theme="@style/ThemeOverlay.Toolbar.Main"
                 android:background="@color/white"
+                app:title="@string/app_name"
                 app:titleTextAppearance="@style/TextAppearance.Toolbar.Main"/>
 
         </com.google.android.material.appbar.AppBarLayout>

@@ -6,7 +6,6 @@ package com.ggu.firebase.data.model
  * @see https://reqres.in/
  */
 
-
 typealias User = SampleData.UserData
 typealias Resource = SampleData.ResourceData
 
@@ -15,7 +14,7 @@ data class SampleData<T>(
     val per_page: Int,
     val total: Int,
     val total_pages: Int,
-    val data: T
+    val data: List<T>
 ) {
     data class UserData(
         val id: Int,

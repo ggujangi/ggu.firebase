@@ -1,24 +1,58 @@
 package com.ggu.firebase.ui.sample
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.util.Log
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.liveData
+import com.ggu.firebase.R
 import com.ggu.firebase.data.SampleRepository
-import com.ggu.firebase.data.model.SampleData
-import com.ggu.firebase.data.model.User
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 class SampleViewModel(private val repository: SampleRepository) : ViewModel() {
 
-    private val users: MutableLiveData<SampleData<User>> = MutableLiveData()
-
-    suspend fun getUsers(page: Int) : LiveData<SampleData<User>> {
-        if(users.value == null){
-            val u = withContext(Dispatchers.IO) { repository.getUsers(1) }
-            users.value = u
+    fun getUsers(page: Int) = liveData(Dispatchers.IO) {
+        Log.d("sampleTest", "getUsers()")
+        emit(null)
+        try {
+            emit(repository.getUsers(page))
+        } catch (e: Exception) {
+            emit(repository.getUsers(page))
         }
+    }
 
-        return users
+    fun getResources(page: Int) = liveData(Dispatchers.IO) {
+        emit(null)
+        try {
+            emit(repository.getResources(page))
+        } catch (e: Exception) {
+            emit(repository.getResources(page))
+        }
+    }
+
+    fun getRandomUser() = liveData(Dispatchers.IO) {
+        emit(null)
+        try {
+            emit(repository.getRandomUser())
+        } catch (e: Exception) {
+            emit(repository.getRandomUser())
+        }
+    }
+
+    fun getRandomResource() = liveData(Dispatchers.IO) {
+        emit(null)
+        try {
+            emit(repository.getRandomResource())
+        } catch (e: Exception) {
+            emit(repository.getRandomResource())
+        }
+    }
+
+
+    fun refresh(id:Int){
+        when(id){
+            R.id.users -> getUsers(1)
+            R.id.resources -> getResources(1)
+            R.id.random_user -> getRandomUser()
+            R.id.random_resource -> getRandomResource()
+        }
     }
 }
