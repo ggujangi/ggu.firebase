@@ -1,5 +1,6 @@
 package com.ggu.firebase.data
 
+import android.util.Log
 import com.ggu.firebase.data.model.LoggedInUser
 
 /**
@@ -30,6 +31,9 @@ class LoginRepository(val dataSource: LoginDataSource) {
     fun login(username: String, password: String): Result<LoggedInUser> {
         // handle login
         val result = dataSource.login(username, password)
+
+        val loginResult = dataSource.createAccount(username, password)
+        Log.d("firebaseTest", "login() : loginResult = $loginResult")
 
         if (result is Result.Success) {
             setLoggedInUser(result.data)
