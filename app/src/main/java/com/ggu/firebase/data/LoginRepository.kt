@@ -1,5 +1,6 @@
 package com.ggu.firebase.data
 
+import android.util.Log
 import com.ggu.firebase.data.model.LoggedInUser
 
 /**
