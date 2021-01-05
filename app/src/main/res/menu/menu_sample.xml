@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/users"
+        android:title="@string/menu_users"/>
+    <item
+        android:id="@+id/random_user"
+        android:title="@string/menu_random_user"/>
+    <item
+        android:id="@+id/resources"
+        android:title="@string/menu_resources"/>
+    <item
+        android:id="@+id/random_resource"
+        android:title="@string/menu_random_resource"/>
+</menu>

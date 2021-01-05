@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="TextAppearance.Base" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">monospace</item>
         <item name="android:textColor">@color/black</item>
@@ -15,5 +16,10 @@
     <style name="TextAppearance.Title.List" parent="TextAppearance.Base">
         <item name="android:textSize">15dp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ShapeAppearance.Image.List" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearance">?attr/shapeAppearanceMediumComponent</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CornerSize20Percent</item>
     </style>
 </resources>
